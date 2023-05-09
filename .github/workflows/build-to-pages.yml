@@ -44,6 +44,10 @@ jobs:
         with:
           node-version: "16"
       - name: Install dependencies
-        run: npm install
+        run: |
+          cd ../
+          npm install
       - name: Run Unlighthouse
-        run: unlighthouse-ci
+        run: |
+          cd ../
+          unlighthouse-ci
